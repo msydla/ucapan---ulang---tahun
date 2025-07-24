@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ucapan Ulang Tahun</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(135deg, #ffd1dc, #ffe6f0);
+      text-align: center;
+      padding: 30px;
+      color: #333;
+      transition: all 0.5s ease;
+    }
+    .slide {
+      display: none;
+      animation: fadeIn 1s ease;
+    }
+    .active {
+      display: block;
+    }
+    button {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slide active">
+    <h1>Hawoooo sayanggg coba klik disini</h1>
+    <button onclick="nextSlide()">Lanjut</button>
+  </div>
+  <div class="slide">
+    <h1>Selamat bertambah usiaaa SAYANGGGGGKUUUUU</h1>
+    <p>Sekarang usiamu sudah 16 tahunnnn</p>
+    <button onclick="nextSlide()">Lanjut</button>
+  </div>
+  <div class="slide">
+    <p>Sehat selalu yaa sayanggkuu cintakuuuuu, semogaaa selalu dipermudah dalam hal apapun ituu, semakin pinter jugaaaa</p>
+    <button onclick="nextSlide()">Lanjut</button>
+  </div>
+  <div class="slide">
+    <p>Semangat belajarnya semakin ditingkatkan yaaaa kan belajarnya sama akuuuuuu, nuruttt samaa Budeeeeeee jangan bandel² kalo disuruhhhh (GABOLE SEK SEK), sholatnyaa ngga bole telattt</p>
+    <button onclick="nextSlide()">Lanjut</button>
+  </div>
+  <div class="slide">
+    <p>Semakin bertambah usia mu semakin besar juga harapan orang-orang di sekitar mu kepada dirimu terutama orang tua mu dan aku..</p>
+    <p>Jangan pernah lelah dan capek buat jadi orang baikk okeeeeee</p>
+    <button onclick="nextSlide()">Lanjut</button>
+  </div>
+  <div class="slide">
+    <h1>LOVE YOUUU SAYANGGGGG</h1>
+    <p>SAYANGGG UTAAA BANYAKKK - BANYAKKKKK 💖💖💖</p>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function nextSlide() {
+      slides[current].classList.remove("active");
+      current++;
+      if (current < slides.length) {
+        slides[current].classList.add("active");
+      }
+    }
+  </script>
+</body>
+</html>
